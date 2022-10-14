@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titúlo -->
+  <title>App Notas</title>
+
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="./reset.css">
+
+  <!-- CSS Mobile -->
+  <link rel="stylesheet" href="./mobile.css">
+
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,200,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,200,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+</head>
+
+<body>
+  
+  <div id="container">
+
+    <div id="navegacao">
+      <div id="to--do--list"><span class="material-symbols-sharp">receipt_long</span></div>
+      <div id="notas--concluidas"><span class="material-symbols-sharp">select_check_box</span></div>
+    </div>
+
+    <ul id="container--notas">
+        <li class="corpo--nota">
+          <div class="nota--menu">
+            <button><span class="material-symbols-sharp">check_box_outline_blank</span></button>
+            <button><span class="material-symbols-sharp">delete</span></button>
+            <button><span class="material-symbols-sharp">edit</span></button>
+          </div>
+          <h1 class="nota--titulo">Olá Mundo</h1>
+          <p class="nota--texto">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem Lorem ipsum Lorem ipsum Lorem ipsum ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi harum quidem minima quaerat repellendus consectetur pariatur dolores commodi id quia!</p>
+          <div class="nota--info">
+            <a>Ver mais...</a>
+            <time datetime="2022-09-03T16:30"> 16:30 | 03/09/22</time>
+          </div>
+        </li>
+        <li class="corpo--nota">
+          <div class="nota--menu">
+            <button><span class="material-symbols-sharp">check_box_outline_blank</span></button>
+            <button><span class="material-symbols-sharp">delete</span></button>
+            <button><span class="material-symbols-sharp">edit</span></button>
+          </div>
+          <h1 class="nota--titulo">Olá Mundo</h1>
+          <p class="nota--texto">Esse módulo discute os fundamentos da estilização de textos, incluindo a definição de fontes, negritos, itálicos, linhas
+          e espaçamentos de letras, sombras e outras propriedades de textos.</p>
+          <div class="nota--info">
+            <a>Ver mais...</a>
+            <time datetime="2022-09-03T16:30"> 16:30 | 03/09/22</time>
+          </div>
+        </li>
+        <li class="corpo--nota">
+          <div class="nota--menu">
+            <button><span class="material-symbols-sharp">check_box_outline_blank</span></button>
+            <button><span class="material-symbols-sharp">delete</span></button>
+            <button><span class="material-symbols-sharp">edit</span></button>
+          </div>
+          <h1 class="nota--titulo">Olá Mundo</h1>
+          <p class="nota--texto">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem Lorem ipsum Lorem ipsum Lorem ipsum ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Excepturi harum quidem minima quaerat repellendus consectetur pariatur dolores commodi
+            id quia!</p>
+          <div class="nota--info">
+            <a>Ver mais...</a>
+            <time datetime="2022-09-03T16:30"> 16:30 | 03/09/22</time>
+          </div>
+        </li>
+        <li class="corpo--nota">
+          <div class="nota--menu">
+            <button><span class="material-symbols-sharp">check_box_outline_blank</span></button>
+            <button><span class="material-symbols-sharp">delete</span></button>
+            <button><span class="material-symbols-sharp">edit</span></button>
+          </div>
+          <h1 class="nota--titulo">Olá Mundo</h1>
+          <p class="nota--texto">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem Lorem ipsum Lorem ipsum Lorem ipsum ipsum
+            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Excepturi harum quidem minima quaerat repellendus consectetur pariatur dolores commodi
+            id quia!</p>
+          <div class="nota--info">
+            <a>Ver mais...</a>
+            <time datetime="2022-09-03T16:30"> 16:30 | 03/09/22</time>
+          </div>
+        </li>
+    </ul>
+
+    <div id="menu" class="menu menu--fechado">
+      <button class="botoes--menu icone--botao--abrir"><span class="material-symbols-sharp icone--menu">clear_all</span></button>
+      <button id="nova--nota" onclick="menuNovaNota()" class="botoes--menu botoes--menu--fechado"><span class="material-symbols-sharp">add</span></button>
+      <button class="botoes--menu botoes--menu--fechado"><span class="material-symbols-sharp">search</span></button>
+      <button class="botoes--menu botoes--menu--fechado"><span class="material-symbols-sharp">settings</span></button>
+      <button class="botoes--menu botoes--menu--fechado icone--botao--fechar"><span class="material-symbols-sharp">arrow_forward_ios</span></button>
+    </div>
+
+  </div>
+
+  <div id="modal--nova--nota">
+    <div class="corpo--nova--nota">
+      <div class="fechar--modal--nova--nota">
+        <p>Nova nota</p>
+        <button onclick="menuNovaNota()"><span class="material-symbols-sharp">close</span></button>
+      </div>
+      <div class="inputGroup">
+        <input type="text" required="" autocomplete="off">
+        <label for="name">Titúlo</label>
+      </div>
+      <div class="inputGroupTextArea">
+        <textarea required="" autocomplete="off"></textarea>
+        <label for="name">Texto</label>
+      </div>
+      <button id="criar--nova--nota">Confirmar</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

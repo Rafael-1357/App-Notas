@@ -1,0 +1,297 @@
+:root{
+  --roxo: #9500ff;
+  --cinza: #14121d;
+  --branco: #fbffff;
+}
+
+body{
+  position: relative;
+}
+
+#navegacao{
+  width: calc(100% - 40px);
+  height: 60px;
+
+  margin: 20px 20px 0 20px;
+  border-radius: 8px;
+  background-color: var(--roxo);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#to--do--list{
+  border-right: 1px solid #541e7a;
+}
+
+#to--do--list, #notas--concluidas{
+  width: 50%;
+  height: 70%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#to--do--list .material-symbols-sharp, #notas--concluidas .material-symbols-sharp{
+  color: var(--branco);
+  font-size: 32px;
+}
+
+
+#container{
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--cinza);
+  overflow-y:hidden;
+}
+
+#container--notas{
+  width: calc(100% - 40px);
+  height: calc(100% - 140px);
+
+  position: relative;
+
+  margin: 20px 20px 30px 20px;
+  border-radius: 8px;
+  overflow-y:auto;
+  scroll-behavior: smooth;
+
+
+  display: grid;
+  row-gap: 25px;
+}
+
+#container--notas::-webkit-scrollbar{
+  width: 0px;
+}
+
+.corpo--nota{
+  width: 100%;
+  height: 310px;
+
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--branco);
+
+  display: grid;
+  grid-template-rows: 30px 35px 190px 35px;
+}
+
+.nota--menu{
+  border-bottom: 1px solid #cfcfcf;
+
+  display: grid;
+  grid-template-columns: 1fr 30px 30px;
+  align-items: flex-start;
+}
+
+.nota--menu button:nth-child(1){
+  text-align: left;
+}
+
+.material-symbols-rounded{
+  font-size: bold;
+}
+
+.nota--titulo{
+  margin: auto 0;
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  padding: 0 2px;
+}
+
+.nota--texto{
+  max-height: 185px;
+  font-size: 20px;
+  font-family: 'Dosis', sans-serif;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
+  padding: 0 2px;
+  overflow-y: hidden;
+}
+
+.nota--info{
+  font-size: 18px;
+  font-family: 'Dosis', sans-serif;
+
+  margin-top: auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nota--info a{
+  height: 25px;
+
+  color: var(--roxo);
+  font-weight: bold;
+  text-align: end;
+
+  padding: 0 2px;
+}
+
+.menu{
+  width: calc(100% - 39px);
+  height: 60px;
+
+  position: absolute;
+  right: 20px;
+  bottom: 19px;
+
+  border-radius: 8px;
+  background-color: var(--roxo);
+  box-shadow: 0px 0px 20px 1px #3b0066c4;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  transition: 0.5s ease-in-out;
+}
+
+.menu--fechado{
+  width: 60px;
+}
+
+.botoes--menu{
+  width: 100%;
+  height: 70%;
+
+  border-right: 1px solid #541e7a;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.botoes--menu--fechado {
+  display: none;
+}
+
+.botoes--menu .material-symbols-sharp{
+  color: var(--branco);
+  font-size: 28px;
+}
+
+.icone--menu{
+  color: var(--branco);
+  font-size: 38px !important;
+  transform: rotateY(180deg);
+}
+
+#modal--nova--nota{
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Roboto Condensed', sans-serif;
+
+  position: absolute;
+  top: 0;
+
+  background: #14121d80;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+
+  display: none;
+}
+
+.corpo--nova--nota {
+  width: 85%;
+  height: 80%;
+
+  margin: 20% 7.5%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--branco);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.fechar--modal--nova--nota{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fechar--modal--nova--nota p{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.fechar--modal--nova--nota .material-symbols-sharp{
+  font-size: 32px;
+}
+
+.inputGroup, .inputGroupTextArea {
+  margin: 1em 0 1em 0;
+  width: 100%;
+  position: relative;
+}
+
+.inputGroup input, .inputGroupTextArea textarea {
+  font-size: 20px;
+  padding: 1em;
+  outline: none;
+  border: 4px solid var(--cinza);
+  background-color: transparent;
+  border-radius: 4px;
+  width: 100%;
+  resize: none;
+}
+
+.inputGroup label, .inputGroupTextArea label {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  padding: 0.9em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  color: var(--cinza);
+}
+
+.inputGroup :is(input:focus, input:valid)~label, .inputGroupTextArea :is(textarea:focus, textarea:valid)~label {
+  transform: translateY(-50%) scale(1);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 1px;
+  background-color:var(--branco);
+}
+
+.inputGroup :is(input:focus, input:valid), .inputGroupTextArea :is(textarea:focus, textarea:valid) {
+  border-color: var(--cinza);
+}
+
+.inputGroupTextArea,.inputGroupTextArea textarea{
+  height: 100%;
+  text-align: start;
+}
+
+#criar--nova--nota{
+  width: auto;
+  height: 50px;
+
+  color: var(--branco);
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin: 0 auto 5px auto;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--roxo);
+}
+
+
