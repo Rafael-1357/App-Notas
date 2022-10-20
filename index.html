@@ -105,19 +105,22 @@
   </div>
 
   <div id="modal--nova--nota">
+
     <div class="corpo--nova--nota">
       <div class="fechar--modal--nova--nota">
         <p>Nova nota</p>
         <button onclick="menuNovaNota()"><span class="material-symbols-sharp">close</span></button>
       </div>
-      <div class="inputGroup">
-        <input type="text" required="" autocomplete="off">
-        <label for="name">Título</label>
+
+      <div class="inputs--nova--nota">
+        <label id="label--input--text" for="">Título</label>
+        <input type="text" name="input--text" id="input--text--nova--nota">
       </div>
-      <div class="inputGroupTextArea">
-        <textarea required="" autocomplete="off"></textarea>
-        <label for="name">Texto</label>
+      <div class="inputs--nova--nota">
+        <label id="label--input--text" for="">Texto</label>
+        <textarea name="input--textarea" id="input--textarea--nova--nota"></textarea>
       </div>
+
       <button id="criar--nova--nota">Confirmar</button>
     </div>
   </div>
