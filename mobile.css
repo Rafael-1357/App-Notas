@@ -60,7 +60,6 @@ body{
   overflow-y:auto;
   scroll-behavior: smooth;
 
-
   display: grid;
   row-gap: 25px;
 }
