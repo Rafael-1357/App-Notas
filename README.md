@@ -40,6 +40,11 @@ Com a criação desse projeto posso por meus conhecimentos de HTML e CSS em prá
 
 
 
+## Deploy
+
+https://app-notas-v1.netlify.app
+
+
 ## Licença
 
 [MIT](https://choosealicense.com/licenses/mit/)
